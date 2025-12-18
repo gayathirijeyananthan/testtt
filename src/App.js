@@ -1,28 +1,28 @@
-// //Child Component
-// function Greeting(props) {
-//    const style={
-//       color: "white",
-//       backgroundColor: "blue",
-//       padding: "10px",
-//       borderRadius: "8px",
-//       margin: "5px 0"
-//     }
-//   return (
-//     <>
-//       <p style={style}>Hello this is {props.name}</p>
-//     </>
-//   )
-// }
+//Child Component
+function Greeting(props) {
+   const style={
+      color: "white",
+      backgroundColor: "blue",
+      padding: "10px",
+      borderRadius: "8px",
+      margin: "5px 0"
+    }
+  return (
+    <>
+      <p style={style}>Hello this is {props.name}</p>
+    </>
+  )
+}
 
-// //Parent Component
-// function App() {
-//   return (
-//     <>
-//       <Greeting name="Asha" email="fjfjf" />
-//       <Greeting name="John" />
-//     </>
-//   )
-// }
+//Parent Component
+function App() {
+  return (
+    <>
+      <Greeting name="Asha" email="fjfjf" />
+      <Greeting name="John" />
+    </>
+  )
+}
 
 
 
@@ -44,20 +44,6 @@
 //     </div>
 //   );
 // }
-import { Route, Routes } from "react-router-dom";
-import Header from "../src/pages/header";
-import Nav from "../src/components/navbar";
-function App() {
-  return (
-    <>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Header />} />
-        <Route path="/header" element={<Header />} />
-        <Route path="/footer" element={<Header />} />
-      </Routes>
-    </>
-  )
-}
+
 
 export default App;
