@@ -1,25 +1,63 @@
-import logo from './logo.svg';
-import './App.css';
+// //Child Component
+// function Greeting(props) {
+//    const style={
+//       color: "white",
+//       backgroundColor: "blue",
+//       padding: "10px",
+//       borderRadius: "8px",
+//       margin: "5px 0"
+//     }
+//   return (
+//     <>
+//       <p style={style}>Hello this is {props.name}</p>
+//     </>
+//   )
+// }
 
+// //Parent Component
+// function App() {
+//   return (
+//     <>
+//       <Greeting name="Asha" email="fjfjf" />
+//       <Greeting name="John" />
+//     </>
+//   )
+// }
+
+
+
+// import React, { useState } from 'react';
+
+// function Counter() {
+//   // useState returns an array: [currentState, functionToUpdateState]
+//   const [count, setCount] = useState(0);
+
+//   return (
+//     <div style={{ textAlign: 'center', marginTop: '50px' }}>
+//       <h2>Counter: {count}</h2>
+//       <button onClick={() => setCount(count + 1)} style={{ padding: '10px 20px' }}>
+//         Increase
+//       </button>
+//       <button onClick={() => setCount(count - 1)} style={{ padding: '10px 20px', marginLeft: '10px' }}>
+//         Decrease
+//       </button>
+//     </div>
+//   );
+// }
+import { Route, Routes } from "react-router-dom";
+import Header from "../src/pages/header";
+import Nav from "../src/components/navbar";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Header />} />
+        <Route path="/header" element={<Header />} />
+        <Route path="/footer" element={<Header />} />
+      </Routes>
+    </>
+  )
 }
 
 export default App;
